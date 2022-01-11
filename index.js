@@ -11,11 +11,15 @@ cliente2.nome = "Alice";
 cliente2.cpf = 88822233309;
 
 
-const contaCorrenteRicardo = new ContaCorrente();
-contaCorrenteRicardo.agencia = 1001;
-contaCorrenteRicardo.Cliente = cliente1;
+const conta1 = new ContaCorrente();
+conta1.agencia = 1001;
+conta1.Cliente = cliente1;
+conta1.depositar(500);
 
-const valorSacado = contaCorrenteRicardo.sacar(50);
+const conta2 = new ContaCorrente();
+conta2.agencia = 1002
+conta2.Cliente = cliente2;
 
-console.log(contaCorrenteRicardo);
-//console.log(cliente2);
+conta1.transferir(300, conta2);
+console.log(conta2);
+console.log(conta1);
